@@ -40,6 +40,7 @@ function TypingText() {
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/vimal-v-107402380", icon: "in" },
   { label: "GitHub", href: "https://github.com/vimalvk-gif", icon: "gh" },
+  { label: "Instagram", href: "https://www.instagram.com/vimalll_27", icon: "ig" },
   { label: "Email", href: "mailto:vimal.vk906@gmail.com", icon: "ig" },
 ];
 
