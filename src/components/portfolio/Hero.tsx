@@ -146,7 +146,13 @@ export function Hero() {
             <a href="#projects" className="btn-neon">
               View Projects
             </a>
-            <a href="/resume.pdf" download className="btn-outline-neon">
+            <a
+              href="/resume.pdf"
+              download="Vimal-V-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline-neon"
+            >
               Download Resume
             </a>
           </div>
