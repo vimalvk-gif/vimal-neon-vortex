@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 function SectionTitle({ kicker, title }: { kicker: string; title: string }) {
   return (
@@ -334,7 +336,43 @@ export function Coding() {
 }
 
 export function Contact() {
+  const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (sending) return;
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    if (!name || !email || !message) return;
+
+    setSending(true);
+    try {
+      const { data, error } = await supabase.functions.invoke(
+        "send-contact-email",
+        { body: { name, email, message } },
+      );
+      if (error) throw error;
+      if ((data as any)?.ok) {
+        setSent(true);
+        form.reset();
+        toast.success("Message sent! Vimal will get back to you soon.");
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        toast.error("Couldn't send right now. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("Couldn't send your message. Please try again later.");
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <section id="contact" className="relative py-28 px-6">
       <div className="max-w-4xl mx-auto">
@@ -354,15 +392,12 @@ export function Contact() {
             </a>
           </p>
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-              setTimeout(() => setSent(false), 3000);
-            }}
+            onSubmit={handleSubmit}
             className="grid gap-4"
           >
             <input
               required
+              name="name"
               type="text"
               placeholder="Your Name"
               className="px-5 py-3 rounded-xl bg-transparent text-foreground outline-none"
@@ -373,6 +408,7 @@ export function Contact() {
             />
             <input
               required
+              name="email"
               type="email"
               placeholder="Your Email"
               className="px-5 py-3 rounded-xl bg-transparent text-foreground outline-none"
@@ -383,6 +419,7 @@ export function Contact() {
             />
             <textarea
               required
+              name="message"
               rows={5}
               placeholder="Your Message"
               className="px-5 py-3 rounded-xl bg-transparent text-foreground outline-none resize-none"
@@ -391,8 +428,8 @@ export function Contact() {
                 background: "oklch(0.2 0.04 275 / 0.5)",
               }}
             />
-            <button type="submit" className="btn-neon mt-2">
-              {sent ? "✓ Message Sent" : "Send Message"}
+            <button type="submit" disabled={sending} className="btn-neon mt-2">
+              {sending ? "Sending..." : sent ? "✓ Message Sent" : "Send Message"}
             </button>
           </form>
         </div>
