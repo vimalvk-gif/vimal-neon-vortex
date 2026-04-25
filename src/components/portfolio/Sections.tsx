@@ -21,18 +21,20 @@ export function About() {
         <div className="glass-card p-10 reveal">
           <p className="text-lg leading-relaxed text-foreground/90">
             I'm <span className="gradient-text font-semibold">Vimal V.</span>, a
-            first-year ECE student who treats every circuit and every line of code
-            as a chance to learn something new. My world sits at the intersection
-            of <span className="text-[var(--neon-cyan)]">electronics</span> and{" "}
-            <span className="text-[var(--neon-pink)]">web development</span> — I
-            love understanding how signals flow through silicon just as much as
-            how data flows through the web.
+            first-year B.E. Electronics &amp; Communication Engineering student at{" "}
+            <span className="gradient-text font-semibold">
+              Sri Krishna College of Engineering and Technology
+            </span>
+            , Coimbatore (2025 – 2029). I have a strong interest in{" "}
+            <span className="text-[var(--neon-pink)]">web development</span> and
+            I'm currently seeking an internship to gain practical experience
+            and contribute to real-world projects.
           </p>
           <p className="mt-5 text-foreground/80 leading-relaxed">
-            Right now I'm sharpening my fundamentals in C, Python, and JavaScript,
-            exploring circuit design, and building small projects to turn ideas
-            into something real. I believe the best engineers are lifelong
-            students — so I keep shipping, keep breaking things, and keep growing.
+            I'm learning Web Development through online resources and practicing
+            by building small projects. I'm a quick learner with a strong
+            willingness to grow, and I love turning new concepts into something
+            real — one project at a time.
           </p>
         </div>
       </div>
@@ -42,30 +44,30 @@ export function About() {
 
 const skillGroups = [
   {
-    title: "Programming",
-    icon: "</>",
-    items: [
-      { name: "C", level: 75 },
-      { name: "Python", level: 70 },
-      { name: "JavaScript", level: 65 },
-    ],
-  },
-  {
-    title: "Web",
+    title: "Web Development",
     icon: "🌐",
     items: [
-      { name: "HTML", level: 90 },
-      { name: "CSS", level: 85 },
-      { name: "React", level: 60 },
+      { name: "HTML", level: 70 },
+      { name: "CSS", level: 65 },
+      { name: "JavaScript", level: 40 },
     ],
   },
   {
-    title: "Electronics",
-    icon: "⚙️",
+    title: "Tools",
+    icon: "🛠️",
     items: [
-      { name: "Circuit Design", level: 70 },
-      { name: "Multisim", level: 65 },
-      { name: "Arduino", level: 60 },
+      { name: "Git", level: 40 },
+      { name: "GitHub", level: 45 },
+      { name: "VS Code", level: 75 },
+    ],
+  },
+  {
+    title: "Soft Skills",
+    icon: "✨",
+    items: [
+      { name: "Quick Learner", level: 90 },
+      { name: "Willingness to Learn", level: 95 },
+      { name: "Time Management", level: 80 },
     ],
   },
 ];
@@ -124,22 +126,22 @@ export function Skills() {
 
 const projects = [
   {
-    title: "Smart Home Lighting",
-    desc: "Arduino-based ambient lighting with motion sensing and a web dashboard.",
-    tech: ["Arduino", "C", "HTML", "CSS"],
-    link: "https://github.com",
+    title: "Basic Portfolio Website",
+    desc: "A simple personal website built with HTML and CSS — my first hands-on project to learn webpage structure, styling, and responsiveness.",
+    tech: ["HTML", "CSS"],
+    link: "https://github.com/vimalvk-gif",
   },
   {
-    title: "Personal Portfolio",
-    desc: "This very portfolio — built with custom CSS, animations, and glassmorphism.",
+    title: "This Portfolio",
+    desc: "A modern dark-themed portfolio with glassmorphism, neon accents, and scroll animations — built while learning React and modern CSS.",
     tech: ["React", "TypeScript", "CSS"],
-    link: "https://github.com",
+    link: "https://github.com/vimalvk-gif",
   },
   {
-    title: "Circuit Simulator Notes",
-    desc: "Interactive notes & visualizations for basic logic gates and op-amps.",
-    tech: ["JavaScript", "HTML", "CSS"],
-    link: "https://github.com",
+    title: "Learning Sandbox",
+    desc: "A growing collection of small practice projects as I sharpen my Web Development fundamentals through online resources.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/vimalvk-gif",
   },
 ];
 
@@ -295,9 +297,9 @@ export function Blog() {
 }
 
 const codingProfiles = [
-  { name: "LeetCode", icon: "🟧", href: "https://leetcode.com" },
-  { name: "HackerRank", icon: "🟩", href: "https://hackerrank.com" },
-  { name: "GitHub", icon: "🐙", href: "https://github.com" },
+  { name: "GitHub", icon: "🐙", href: "https://github.com/vimalvk-gif" },
+  { name: "LinkedIn", icon: "💼", href: "https://www.linkedin.com/in/vimal-v-107402380" },
+  { name: "Email", icon: "✉️", href: "mailto:vimal.vk906@gmail.com" },
 ];
 
 export function Coding() {
@@ -335,10 +337,14 @@ export function Contact() {
           <p className="text-center text-muted-foreground mb-8">
             Reach me at{" "}
             <a
-              href="mailto:vimal@example.com"
+              href="mailto:vimal.vk906@gmail.com"
               className="gradient-text font-semibold"
             >
-              vimal@example.com
+              vimal.vk906@gmail.com
+            </a>
+            {" "}· 📞{" "}
+            <a href="tel:+918940592916" className="gradient-text font-semibold">
+              +91 89405 92916
             </a>
           </p>
           <form
@@ -400,13 +406,11 @@ export function Footer() {
           © {new Date().getFullYear()} Vimal V. All rights reserved.
         </p>
         <div className="flex gap-3 text-muted-foreground text-sm">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-foreground">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/vimal-v-107402380" target="_blank" rel="noreferrer" className="hover:text-foreground">LinkedIn</a>
           <span>·</span>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub</a>
+          <a href="https://github.com/vimalvk-gif" target="_blank" rel="noreferrer" className="hover:text-foreground">GitHub</a>
           <span>·</span>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-foreground">Twitter</a>
-          <span>·</span>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-foreground">Instagram</a>
+          <a href="mailto:vimal.vk906@gmail.com" className="hover:text-foreground">Email</a>
         </div>
       </div>
     </footer>
