@@ -246,7 +246,13 @@ export function Resume() {
             Want the full story? Download my resume for a complete look at my
             education, skills, and projects.
           </p>
-          <a href="/resume.pdf" download className="btn-neon">
+          <a
+            href="/resume.pdf"
+            download="Vimal-V-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-neon"
+          >
             ⬇ Download Resume (PDF)
           </a>
         </div>
