@@ -40,7 +40,8 @@ function TypingText() {
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/vimal-v-107402380", icon: "in" },
   { label: "GitHub", href: "https://github.com/vimalvk-gif", icon: "gh" },
-  { label: "Email", href: "mailto:vimal.vk906@gmail.com", icon: "ig" },
+  { label: "Instagram", href: "https://www.instagram.com/vimalll_27", icon: "ig" },
+  { label: "Email", href: "mailto:vimal.vk906@gmail.com", icon: "mail" },
 ];
 
 function SocialIcon({ name }: { name: string }) {
@@ -74,6 +75,12 @@ function SocialIcon({ name }: { name: string }) {
       return (
         <svg viewBox="0 0 24 24" {...common}>
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      );
+    case "mail":
+      return (
+        <svg viewBox="0 0 24 24" {...common}>
+          <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4.236l-8 5-8-5V6l8 5 8-5v2.236z"/>
         </svg>
       );
     default:
