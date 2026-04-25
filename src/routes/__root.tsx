@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vimal V. — ECE Student & Aspiring Developer" },
-      { name: "description", content: "Portfolio of Vimal V., a 1st-year Electronics & Communication Engineering student exploring electronics, web development, and creative coding." },
+      { title: "Vimal V — ECE Student & Aspiring Developer" },
+      { name: "description", content: "Portfolio of Vimal V, a 1st-year Electronics & Communication Engineering student exploring electronics, web development, and creative coding." },
       { name: "author", content: "Vimal V." },
-      { property: "og:title", content: "Vimal V. — ECE Student & Aspiring Developer" },
-      { property: "og:description", content: "Projects, skills, and writing from a 1st-year ECE student bridging hardware and the web." },
+      { property: "og:title", content: "Vimal V — ECE Student & Aspiring Developer" },
+      { property: "og:description", content: "Portfolio of Vimal V, a 1st-year Electronics & Communication Engineering student exploring electronics, web development, and creative coding." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Vimal V — ECE Student & Aspiring Developer" },
+      { name: "twitter:description", content: "Portfolio of Vimal V, a 1st-year Electronics & Communication Engineering student exploring electronics, web development, and creative coding." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/BMVTJt05dQQsX03cW6yj1Tca5rQ2/social-images/social-1777094892771-my_image.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/BMVTJt05dQQsX03cW6yj1Tca5rQ2/social-images/social-1777094892771-my_image.webp" },
     ],
     links: [
       {
