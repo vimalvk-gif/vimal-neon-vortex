@@ -38,11 +38,9 @@ function TypingText() {
 }
 
 const socials = [
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "in" },
-  { label: "GitHub", href: "https://github.com", icon: "gh" },
-  { label: "Instagram", href: "https://instagram.com", icon: "ig" },
-  { label: "YouTube", href: "https://youtube.com", icon: "yt" },
-  { label: "Twitter", href: "https://twitter.com", icon: "tw" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vimal-v-107402380", icon: "in" },
+  { label: "GitHub", href: "https://github.com/vimalvk-gif", icon: "gh" },
+  { label: "Email", href: "mailto:vimal.vk906@gmail.com", icon: "ig" },
 ];
 
 function SocialIcon({ name }: { name: string }) {
@@ -131,9 +129,10 @@ export function Hero() {
             <TypingText />
           </h2>
           <p className="mt-6 text-muted-foreground max-w-lg leading-relaxed">
-            1st-year Electronics &amp; Communication Engineering student passionate
-            about bridging hardware and software — building circuits by day,
-            crafting clean web experiences by night.
+            First-year Electronics &amp; Communication Engineering student at
+            Sri Krishna College of Engineering and Technology, Coimbatore.
+            Passionate about web development and eager to build real-world
+            projects through hands-on learning.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
